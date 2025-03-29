@@ -36,8 +36,17 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.mockito:mockito-core:4.0.0'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+    implementation 'org.hibernate.validator:hibernate-validator:7.0.0.Final'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 
 }
+
+tasks.named('bootJar') {
+    archiveFileName.set("app.jar")
+}
+
 
 tasks.named('test') {
     useJUnitPlatform()
