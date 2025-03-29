@@ -3,12 +3,15 @@ name: SwiftApi
 services:
   db:
     image: 'postgres:13.1-alpine'
-    container_name: postgresql
+    container_name: db
     environment:
       - POSTGRES_USER=compose-postgres
       - POSTGRES_PASSWORD=compose-postgres
     ports:
       - "5432:5432"
+    networks:
+      - app-network
+
   app:
     build:
       context: ..

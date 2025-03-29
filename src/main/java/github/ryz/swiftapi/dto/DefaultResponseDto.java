@@ -1,0 +1,13 @@
+package github.ryz.swiftapi.dto;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+public class DefaultResponseDto {
+    private String message;
+}
