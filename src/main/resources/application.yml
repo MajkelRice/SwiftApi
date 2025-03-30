@@ -8,13 +8,19 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/compose-postgres}
-    username: ${SPRING_DATASOURCE_USERNAME:compose-postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:compose-postgres}
+    url: jdbc:postgresql://db:5432/compose-postgres
+    username: compose-postgres
+    password: compose-postgres
 
 springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
   api-docs:
     path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+
 
 logging:
   level:
